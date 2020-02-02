@@ -11,3 +11,6 @@ __pycache__/
 
 ### Virtual Environment ###
 env/
+
+### Metadata ###
+camera_settings.log
