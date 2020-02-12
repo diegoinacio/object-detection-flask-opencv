@@ -67,6 +67,12 @@ def request_contrast_up():
     print('*'*10, VIDEO.contrast)
     return "nothing"
 
+@application.route('/reset_camera')
+def reset_camera():
+    STATUS = reset_settings()
+    print('*'*10, STATUS)
+    return "nothing"
+
 
 if __name__ == '__main__':
     application.run(debug=True)
