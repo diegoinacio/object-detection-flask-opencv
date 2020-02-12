@@ -64,3 +64,14 @@ $(function() {
         return false;
     });
 });
+
+$(function() {
+    // reset camera
+    $('a#reset-cam').bind('click', function() {
+        $.getJSON('/reset_camera',
+            function(data) {
+            // do nothing
+        });
+        return false;
+    });
+});
