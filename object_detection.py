@@ -6,12 +6,12 @@ import numpy as np
 class ObjectDetection:
     def __init__(self):
         self.MODEL = cv2.dnn.readNet(
-            'model/yolov3.weights',
-            'model/yolov3.cfg'
+            'models/yolov3.weights',
+            'models/yolov3.cfg'
         )
 
         self.CLASSES = []
-        with open("model/coco.names", "r") as f:
+        with open("models/coco.names", "r") as f:
             self.CLASSES = [line.strip() for line in f.readlines()]
 
         self.OUTPUT_LAYERS = [self.MODEL.getLayerNames()[i[0] - 1] for i in self.MODEL.getUnconnectedOutLayers()]
