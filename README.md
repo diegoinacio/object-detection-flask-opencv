@@ -2,6 +2,8 @@
 
 Web application for *real-time* object detection on video streaming via web browser. 
 
+![layout](_source/layout.jpg)
+
 
 ## Installation
 
