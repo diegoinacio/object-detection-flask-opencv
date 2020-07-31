@@ -69,6 +69,7 @@ class VideoStreaming(object):
         self.MODEL = ObjectDetection()
 
         self._preview = True
+        self._flipH = False
         self._detect = False
         self._exposure = self.VIDEO.get(cv2.CAP_PROP_EXPOSURE)
         self._contrast = self.VIDEO.get(cv2.CAP_PROP_CONTRAST)
@@ -80,6 +81,14 @@ class VideoStreaming(object):
     @preview.setter
     def preview(self, value):
         self._preview = bool(value)
+
+    @property
+    def flipH(self):
+        return self._flipH
+
+    @flipH.setter
+    def flipH(self, value):
+        self._flipH = bool(value)
 
     @property
     def detect(self):
@@ -110,6 +119,8 @@ class VideoStreaming(object):
     def show(self):
         while(self.VIDEO.isOpened()):
             ret, snap = self.VIDEO.read()
+            if self.flipH:
+                snap = cv2.flip(snap, 1)
             
             if ret == True:
                 if self._preview:
