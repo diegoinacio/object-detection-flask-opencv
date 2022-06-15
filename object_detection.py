@@ -14,7 +14,7 @@ class ObjectDetection:
         with open("models/coco.names", "r") as f:
             self.CLASSES = [line.strip() for line in f.readlines()]
 
-        self.OUTPUT_LAYERS = [self.MODEL.getLayerNames()[i[0] - 1] for i in self.MODEL.getUnconnectedOutLayers()]
+        self.OUTPUT_LAYERS = [self.MODEL.getLayerNames()[i - 1] for i in self.MODEL.getUnconnectedOutLayers()]
         self.COLORS = np.random.uniform(0, 255, size=(len(self.CLASSES), 3))
         self.COLORS /= (np.sum(self.COLORS**2, axis=1)**0.5/255)[np.newaxis].T
 
