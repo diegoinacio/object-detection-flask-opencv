@@ -1,6 +1,6 @@
-// Functions to deal with button events
+// ! Functions that deal with button events
 $(function () {
-  // Preview switch
+  // * Preview switch
   $("a#cam-preview").bind("click", function () {
     $.getJSON("/request_preview_switch", function (data) {
       // do nothing
@@ -10,7 +10,7 @@ $(function () {
 });
 
 $(function () {
-  // Flip horizontal switch
+  // * Flip horizontal switch
   $("a#flip-horizontal").bind("click", function () {
     $.getJSON("/request_flipH_switch", function (data) {
       // do nothing
@@ -20,7 +20,7 @@ $(function () {
 });
 
 $(function () {
-  // Model switch
+  // * Model switch
   $("a#use-model").bind("click", function () {
     $.getJSON("/request_model_switch", function (data) {
       // do nothing
@@ -30,7 +30,7 @@ $(function () {
 });
 
 $(function () {
-  // exposure down
+  // * exposure down
   $("a#exposure-down").bind("click", function () {
     $.getJSON("/request_exposure_down", function (data) {
       // do nothing
@@ -40,7 +40,7 @@ $(function () {
 });
 
 $(function () {
-  // exposure up
+  // * exposure up
   $("a#exposure-up").bind("click", function () {
     $.getJSON("/request_exposure_up", function (data) {
       // do nothing
@@ -50,7 +50,7 @@ $(function () {
 });
 
 $(function () {
-  // contrast down
+  // * contrast down
   $("a#contrast-down").bind("click", function () {
     $.getJSON("/request_contrast_down", function (data) {
       // do nothing
@@ -60,7 +60,7 @@ $(function () {
 });
 
 $(function () {
-  // contrast up
+  // * contrast up
   $("a#contrast-up").bind("click", function () {
     $.getJSON("/request_contrast_up", function (data) {
       // do nothing
@@ -70,7 +70,7 @@ $(function () {
 });
 
 $(function () {
-  // reset camera
+  // * reset camera
   $("a#reset-cam").bind("click", function () {
     $.getJSON("/reset_camera", function (data) {
       // do nothing
