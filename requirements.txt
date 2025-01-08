@@ -1,0 +1,5 @@
+Flask==2.1.2
+Flask-Bootstrap==3.3.7.1
+numpy==1.23.0
+opencv-python==4.6.0.66
+requests==2.28.0

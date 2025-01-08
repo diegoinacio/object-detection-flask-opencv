@@ -1,0 +1,18 @@
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
+
+### Jupyter Notebook ###
+.ipynb_checkpoints
+
+### VSCode ###
+.vscode/
+
+### Virtual Environment ###
+env/
+
+### Metadata ###
+camera_settings.log
+
+*.weights
